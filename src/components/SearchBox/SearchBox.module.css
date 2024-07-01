@@ -1,0 +1,17 @@
+.searchForm {
+  min-width: 320px;
+  width: 345px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.searchForm > input {
+  background-color: #726f6f;
+  border: 1px solid rgb(29, 29, 29);
+  border-radius: 4px;
+  color: rgb(29, 29, 29);
+  font-size: 28px;
+}

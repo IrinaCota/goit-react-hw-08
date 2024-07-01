@@ -1,0 +1,46 @@
+.card {
+  min-width: 320px;
+  width: 345px;
+  max-height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid rgb(29, 29, 29);
+  border-radius: 10px;
+  background-color: rgb(77, 74, 71);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.info > p {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.btn {
+  max-width: 150px;
+  max-height: 50px;
+  border-radius: 8px;
+  border: 1px solid rgb(99, 36, 36);
+  padding: 0.6em 1.2em;
+  color: rgb(29, 29, 29);
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #f45353;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+.icon {
+  width: 14px;
+  height: 14px;
+}
