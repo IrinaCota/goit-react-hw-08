@@ -1,12 +1,11 @@
-import "./App.css";
-
-import Loader from '../Loader/Loader';
+import './App.css';
+import { useDispatch, useSelector } from 'react-redux';
+import { Route, Routes } from 'react-router-dom';
 import Layout from '../Layout/Layout';
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from 'react';
 import { refreshUser } from '../../redux/auth/operations';
 import { selectIsRefreshing } from '../../redux/auth/selectors';
-import { Route, Routes } from 'react-router-dom';
+import Loader from '../Loader/Loader';
 import RestrictedRoute from '../RestrictedRoute/RestrictedRoute';
 import PrivateRoute from '../PrivateRoute/PrivateRoute';
 import { Suspense, lazy } from 'react';
@@ -65,11 +64,11 @@ function App() {
             }
           />
 
-  
+
         </Routes>
       </Suspense>
     </Layout>
   );
 }
 
-export default App
+export default App;

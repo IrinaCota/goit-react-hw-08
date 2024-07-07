@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { deleteContact } from '../../redux/contacts/operations';
 import toast, { Toaster } from 'react-hot-toast';
-import ContactEditor from '../Modal/ContactEditor';
+import ContactEditor from '../Modal/Modal';
 import PropTypes from 'prop-types';
 
 export default function Contact({ item }) {

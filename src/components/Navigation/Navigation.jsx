@@ -5,8 +5,7 @@ import { useSelector } from 'react-redux';
 import { selectIsLoggedIn } from '../../redux/auth/selectors';
 import { FaHome } from 'react-icons/fa';
 import { RiContactsBook3Fill } from 'react-icons/ri';
-import AuthNav from '../AuthNav/AuthNav';
-import RestrictedRoute from '../RestrictedRoute/RestrictedRoute';
+
 
 const makeNavLinkClass = ({ isActive }) => {
   return clsx(css.navLink, isActive && css.active);
@@ -28,7 +27,7 @@ export default function Navigation() {
             </NavLink>
           )}
         </div>
-        {isLoggedIn ? <RestrictedRoute /> : <AuthNav />}
+        
       </nav>
     </header>
   );
