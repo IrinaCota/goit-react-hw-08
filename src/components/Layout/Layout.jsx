@@ -1,18 +1,9 @@
-import Navigation from '../Navigation/Navigation';
-import css from './Layout.module.css';
-import PropTypes from 'prop-types';
+import css from './Layout.module.css'
 
-const Layout = ({ children }) => {
-  return (
-    <div className={css.layout}>
-      <Navigation />
-      <main className={css.mainContent}>{children}</main>
-    </div>
-  );
-};
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-};
+const Layout = ({ children })=> {
+    return (
+     <div className={css.appContainer}>{children}</div>
+    );
+    };
 
 export default Layout;

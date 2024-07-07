@@ -1,7 +1,7 @@
 import './App.css';
+import Layout from '../Layout/Layout';
 import { useDispatch, useSelector } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
-import Layout from '../Layout/Layout';
 import { useEffect } from 'react';
 import { refreshUser } from '../../redux/auth/operations';
 import { selectIsRefreshing } from '../../redux/auth/selectors';
@@ -9,6 +9,7 @@ import Loader from '../Loader/Loader';
 import RestrictedRoute from '../RestrictedRoute/RestrictedRoute';
 import PrivateRoute from '../PrivateRoute/PrivateRoute';
 import { Suspense, lazy } from 'react';
+import AppHeader from '../AppHeader/AppHeader';
 
 const HomePage = lazy(() => import('../../pages/HomePage/HomePage'));
 const SignUpPage = lazy(() =>
@@ -33,7 +34,7 @@ function App() {
     <Loader />
   ) : (
     <Layout>
-      
+      <AppHeader />
       <Suspense fallback={<Loader />}>
         <Routes>
           <Route path="/" element={<HomePage />} />
