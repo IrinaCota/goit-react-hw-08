@@ -7,8 +7,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { refreshUser } from '../../redux/auth/operations';
 import { selectIsRefreshing } from '../../redux/auth/selectors';
 import { Route, Routes } from 'react-router-dom';
-import RestrictedRoute from '../UserMenu/RestrictedRoute';
-import PrivateRoute from '../UserMenu/UserMenu';
+import RestrictedRoute from '../RestrictedRoute/RestrictedRoute';
+import PrivateRoute from '../PrivateRoute/PrivateRoute';
 import { Suspense, lazy } from 'react';
 
 const HomePage = lazy(() => import('../../pages/HomePage/HomePage'));
