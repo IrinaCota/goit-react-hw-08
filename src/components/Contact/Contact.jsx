@@ -3,13 +3,16 @@ import { FaPhoneAlt } from "react-icons/fa";
 import css from "./Contact.module.css";
 
 import { useDispatch } from "react-redux";
-import { deleteContact } from "../../redux/contactsOps";
+import { deleteContact } from "../../redux/contacts/operations";
 import toast, { Toaster } from "react-hot-toast";
+
+import ContactEditor from "../Modal/Modal";
+import ModalWindow from "../Modal/Modal";
 
 export default function Contact({ item }) {
   const dispatch = useDispatch();
 
- return (
+  return (
     <div className={css.card}>
       <div className={css.info}>
         <p>
@@ -27,9 +30,9 @@ export default function Contact({ item }) {
           dispatch(deleteContact(item.id))
             .unwrap()
             .then(() => {
-              toast.success('Contact successfully deleted!');
+              toast.success("Contact successfully deleted!");
             })
-            .catch(err => {
+            .catch((err) => {
               toast.error(`${err.message}`);
             });
         }}
@@ -37,6 +40,16 @@ export default function Contact({ item }) {
         Delete
       </button>
       <Toaster />
+
+      {modalIsOpen && (
+        <ContactEditor
+          initialName={item.name}
+          initialNumber={item.number}
+          isOpen={modalIsOpen}
+          onClose={handleModalClose}
+          contactId={item.id}
+        />
+      )}
     </div>
   );
 }
