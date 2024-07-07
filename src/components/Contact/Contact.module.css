@@ -25,8 +25,8 @@
   align-items: center;
 }
 
-.btn {
-  max-width: 150px;
+.btnDelete {
+  max-width: 100px;
   max-height: 50px;
   border-radius: 8px;
   border: 1px solid rgb(99, 36, 36);
@@ -36,6 +36,21 @@
   font-weight: 500;
   font-family: inherit;
   background-color: #f45353;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  };
+
+.btnEdit {
+  max-width: 100px;
+  max-height: 50px;
+  border-radius: 8px;
+  border: 1px solid rgb(99, 36, 36);
+  padding: 0.6em 1.2em;
+  color: rgb(29, 29, 29);
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #f18c8c;
   cursor: pointer;
   transition: border-color 0.25s;
 }

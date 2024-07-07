@@ -17,11 +17,11 @@ export default function Navigation() {
       </NavLink>
      
       {isLoggedIn && (
-        <>
+        
           <NavLink to="/contacts" className={makeNavLinkClass}>
             Contacts
           </NavLink>
-        </>
+        
       )}
     </nav>
   );

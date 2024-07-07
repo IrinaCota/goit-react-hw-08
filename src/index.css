@@ -16,12 +16,6 @@
 }
 
 
-
-body {
-  margin-left: 20px;
-  display: flex;
-}
-
 p {
   margin: 0;
   color: rgb(124, 251, 251);
@@ -38,4 +32,5 @@ ol {
   margin: 0;
   padding: 0;
   list-style: none;
+  text-decoration: none;
 }

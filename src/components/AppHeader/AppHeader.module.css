@@ -1,0 +1,9 @@
+.appHeader {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    margin-bottom: 25px;
+    justify-content: space-between;
+    color: beige;
+    align-items: center;
+}

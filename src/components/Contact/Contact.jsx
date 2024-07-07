@@ -37,10 +37,10 @@ export default function Contact({ item }) {
           {item.number}
         </p>
       </div>
-      <button className={css.btn} onClick={handleDelete}>
+      <button className={css.btnDelete} onClick={handleDelete}>
         Delete
       </button>
-      <button className={css.btn} onClick={handleModalOpen}>
+      <button className={css.btnEdit} onClick={handleModalOpen}>
         Edit
       </button>
       <Toaster />

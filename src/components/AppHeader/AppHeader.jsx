@@ -10,7 +10,7 @@ export default function AppHeader() {
   const isLoggedIn = useSelector(selectIsLoggedIn);
   return (
     <div className={css.appHeader}>
-          <div className={css.navWrapper}>
+          <div>
               <navLink>
                   <Navigation />
               </navLink>

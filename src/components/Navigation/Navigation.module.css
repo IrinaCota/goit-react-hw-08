@@ -1,0 +1,18 @@
+.nav {
+    display: flex;
+    gap: 25px;
+    text-decoration: none;
+    color: beige;
+    font-size: 30px;
+    font-weight: bold;
+}
+.navLink {
+    text-decoration: none;
+    color: beige;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.active {
+    text-decoration: underline;
+}

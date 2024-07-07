@@ -1,0 +1,13 @@
+.list {
+    display: flex;
+    gap: 25px;
+}
+
+.authLink {
+    text-decoration: none;
+    color: beige;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+
