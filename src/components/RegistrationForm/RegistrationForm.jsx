@@ -48,7 +48,7 @@ export default function RegistrationForm() {
             toast.error(
               error === 400
                 ? 'This email has already been taken'
-                : 'OOPS! Something went wrong! Please, try again later!'
+                : 'Something went wrong! Please, try again later!'
             );
           });
         actions.resetForm();
