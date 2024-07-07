@@ -1,0 +1,24 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+    color: rgb(177, 210, 238);
+    
+}
+
+.form>input {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    color: rgb(29, 29, 29);
+    font-size: 18px;
+}
+
+.error {
+color: red;
+}
+
+.regBtn {
+
+}

@@ -42,7 +42,7 @@ export default function RegistrationForm() {
         )
           .unwrap()
           .then(() => {
-            toast.success('Account successfully created!');
+            toast.success('Successfully signed up!');
           })
           .catch((error) => {
             toast.error(
@@ -67,7 +67,7 @@ export default function RegistrationForm() {
         <Field name="password" type="password" id={passwordFieldId} />
         <ErrorMessage className={css.error} name="password" component="span" />
 
-        <button className={css.btn} type="submit">
+        <button className={css.regBtn} type="submit">
           Register
         </button>
       </Form>

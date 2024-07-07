@@ -6,4 +6,6 @@
     justify-content: space-between;
     color: beige;
     align-items: center;
+    border-bottom: 2px solid rgb(209, 210, 211);
+    
 }

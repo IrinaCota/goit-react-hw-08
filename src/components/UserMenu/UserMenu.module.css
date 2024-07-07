@@ -1,15 +1,27 @@
 .userMenu {
-
+display: flex;
+gap: 20px;
+align-items: center;
+font-size: 24px;
+font-weight: 700;
 }
 
 .welcome {
+color: beige;
 
 }
 
 .username {
-
+color: beige;
+text-transform: uppercase;
 }
 
 .logOutBtn {
-    
+display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    padding: 4px;
+    background-color: beige;
+    color: rgb(43, 90, 131);
 }
