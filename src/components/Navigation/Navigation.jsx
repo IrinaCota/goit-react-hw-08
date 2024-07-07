@@ -5,6 +5,8 @@ import { useSelector } from 'react-redux';
 import { selectIsLoggedIn } from '../../redux/auth/selectors';
 import { FaHome } from 'react-icons/fa';
 import { RiContactsBook3Fill } from 'react-icons/ri';
+import AuthNav from '../AuthNav/AuthNav';
+import RestrictedRoute from '../RestrictedRoute/RestrictedRoute';
 
 const makeNavLinkClass = ({ isActive }) => {
   return clsx(css.navLink, isActive && css.active);
@@ -12,25 +14,22 @@ const makeNavLinkClass = ({ isActive }) => {
 
 export default function Navigation() {
   const isLoggedIn = useSelector(selectIsLoggedIn);
+  
   return (
-    <nav className={css.nav}>
-      <NavLink to="/" className={makeNavLinkClass}>
-        Home
-      </NavLink>
-      <NavLink to="/" className={css.home}>
-        <FaHome className={css.icon} />
-      </NavLink>
-
-      {isLoggedIn && (
-        <>
-          <NavLink to="/contacts" className={makeNavLinkClass}>
-            Contacts
+    <header className={css.header}>
+      <nav>
+        <div className={css.navigation}>
+          <NavLink to="/" className={makeNavLinkClass}>
+            <FaHome className={css.icon} /> Home
           </NavLink>
-          <NavLink to="/contacts" className={css.contacts}>
-            <RiContactsBook3Fill className={css.icon} />
-          </NavLink>
-        </>
-      )}
-    </nav>
+          {isLoggedIn && (
+            <NavLink to="/contacts" className={makeNavLinkClass}>
+              <RiContactsBook3Fill className={css.icon} /> Contacts
+            </NavLink>
+          )}
+        </div>
+        {isLoggedIn ? <RestrictedRoute /> : <AuthNav />}
+      </nav>
+    </header>
   );
 }

@@ -12,7 +12,7 @@ import PrivateRoute from '../PrivateRoute/PrivateRoute';
 import { Suspense, lazy } from 'react';
 
 const HomePage = lazy(() => import('../../pages/HomePage/HomePage'));
-const RegistrationPage = lazy(() =>
+const SignUpPage = lazy(() =>
   import('../../pages/SignUpPage/SignUpPage')
 );
 const LoginPage = lazy(() => import('../../pages/LoginPage/LoginPage'));
@@ -44,7 +44,7 @@ function App() {
             element={
               <RestrictedRoute
                 redirectTo="/contacts"
-                component={<RegistrationPage />}
+                component={<SignUpPage />}
               />
             }
           />
