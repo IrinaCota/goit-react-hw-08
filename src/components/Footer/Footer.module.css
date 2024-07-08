@@ -1,6 +1,10 @@
 .footer {
-   color: rgb(80, 118, 230);
-   position: fixed;
-   bottom: 10px;
-   right: 10px;
+  color: beige;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+.footerText {
+    color: beige;
+    font-size: 14px;
 }
