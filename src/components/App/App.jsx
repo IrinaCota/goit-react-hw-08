@@ -10,6 +10,7 @@ import RestrictedRoute from '../RestrictedRoute/RestrictedRoute';
 import PrivateRoute from '../PrivateRoute/PrivateRoute';
 import { Suspense, lazy } from 'react';
 import AppHeader from '../AppHeader/AppHeader';
+import Footer from '../Footer/Footer';
 
 const HomePage = lazy(() => import('../../pages/HomePage/HomePage'));
 const SignUpPage = lazy(() =>
@@ -67,7 +68,8 @@ function App() {
 
 
         </Routes>
-      </Suspense>
+        </Suspense>
+        <Footer />
     </Layout>
   );
 }

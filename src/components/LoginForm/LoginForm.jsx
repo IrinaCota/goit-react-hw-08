@@ -7,8 +7,8 @@ import toast from 'react-hot-toast';
 import { logIn } from '../../redux/auth/operations';
 
 const validationSchema = Yup.object().shape({
-  email: Yup.string().required('This field is required to fill!'),
-  password: Yup.string().required('This field is required to fill!'),
+  email: Yup.string().required('Required!'),
+  password: Yup.string().required('Required'),
 });
 
 export default function LoginForm() {
@@ -36,7 +36,7 @@ export default function LoginForm() {
             toast.success('Log in successful');
           })
           .catch(() => {
-            toast.error(`OOPS! An error occurred! Please, try again!`);
+            toast.error(`Something went wrong! Please, try again!`);
           });
         actions.resetForm();
       }}
@@ -50,7 +50,7 @@ export default function LoginForm() {
         <Field name="password" type="password" id={passwordFieldId} />
         <ErrorMessage className={css.error} name="password" component="span" />
 
-        <button className={css.btn} type="submit">
+        <button className={css.loginBtn} type="submit">
           Log in
         </button>
       </Form>
